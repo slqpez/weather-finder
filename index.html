@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>Weather finder</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <h1>Buscador de clima</h1>
+    <div class="results"></div>
+    <div class="card">
+      <form class="form">
+        <input type="text" id="city"/>
+        <select id="country">
+          <option value="" selected disabled hidden>--Seleccione un país--</option>
+          <option value="1">Argentina</option>
+          <option value="2">Colombia</option>
+          <option value="3">Perú</option>
+        </select>
+        <button type="submit" id="btn-search">Buscar</button>
+      </form>
+    </div>
+    <script type="module" src="./app/index.js"></script>
+  </body>
 </html>
