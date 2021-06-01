@@ -1,5 +1,6 @@
 import Finder from "./finder.js"
 import UI from "./UI.js" 
+import API from "./API.js"
 import isEmpty from "./validations.js"
 
 
@@ -23,7 +24,10 @@ btnSearch.addEventListener('click', (e)=>{
     if(isEmpty(cityValue) || isEmpty(countryValue)){
         console.log('Todos los campos son obligatorios.')
     }else{
-        console.log("Buscando...")
+        const APIf = new API(cityValue, countryValue)
+        
+        APIf.fetchWeather()
     }
 
 })
+
